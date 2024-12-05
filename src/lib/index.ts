@@ -23,3 +23,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     move();
 });
+
+export const prerender = true

@@ -173,9 +173,6 @@
     *{box-sizing: border-box;}
 </style>
 
-<script lang="ts">
-</script>
-
 <div class="overlay"></div>
 <div class="soloblight"></div>
 <div class="row">
