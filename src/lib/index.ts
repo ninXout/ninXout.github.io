@@ -1,25 +1,14 @@
 // place files you want to import through the `$lib` alias in this folder.
 
-document.addEventListener('DOMContentLoaded', () => {
-    const interBubble = document.querySelector<HTMLDivElement>('.interactive')!;
-    let curX = 0;
-    let curY = 0;
-    let tgX = 0;
-    let tgY = 0;
+import * as fs from 'fs';
 
-    function move() {
-        curX += (tgX - curX) / 20;
-        curY += (tgY - curY) / 20;
-        interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
-        requestAnimationFrame(() => {
-            move();
-        });
-    }
+function handleLink(link: string) {
+    window.open(link)
+}
 
-    window.addEventListener('mousemove', (event) => {
-        tgX = event.clientX;
-        tgY = event.clientY;
-    });
-
-    move();
-});
+export function randomQuote() {
+    const fileContent = fs.readFileSync("static/quotes.txt", 'utf-8');
+    const split = fileContent.split('\n');
+    console.log(split);
+    return split[Math.floor(Math.random() * split.length)] as string;
+}

@@ -144,6 +144,33 @@
         }
     }
 
+    @keyframes scale {
+        0% {
+            font-size: 12px;
+        }
+        100% {
+            font-size: 26px;
+        }
+    }
+
+    @keyframes scale-reverse {
+        100% {
+            font-size: 12px;
+        }
+        0% {
+            font-size: 26px;
+        }
+    }
+
+    .link {
+        line-height: 26px;
+        font-size: 12px;
+    }
+    
+    .link:hover {
+        animation: scale 1s ease;
+    }
+
     /* Main styles */
     :global(body) {
         display: flex;
@@ -153,17 +180,16 @@
         margin-top: 13.5rem;
         
         color: #ffffff;
-        font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+        font: 800 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
         text-align: center;
         /* img size is 50x50 */
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #8a00e6, 0 0 40px #9d00e6, 0 0 50px #8a00e6, 0 0 60px #9d00e6, 0 0 70px #7f00e6;
         background: url($bg-url) repeat 0 0;
 
         
-        -webkit-animation: bg-scrolling .92s infinite; /* Safari 4+ */
-        -moz-animation:    bg-scrolling .92s infinite; /* Fx 5+ */
-        -o-animation:      bg-scrolling .92s infinite; /* Opera 12+ */
-        animation:         bg-scrolling .92s infinite; /* IE 10+ */
+        -webkit-animation: bg-scrolling .9s infinite;
+        -moz-animation:    bg-scrolling .9s infinite;
+        -o-animation:      bg-scrolling .9s infinite;
+        animation:         bg-scrolling .9s infinite;
         -webkit-animation-timing-function: linear;
         -moz-animation-timing-function:    linear;
         -o-animation-timing-function:      linear;
@@ -173,20 +199,24 @@
     *{box-sizing: border-box;}
 </style>
 
+<script lang="ts">
+    import { randomQuote } from "$lib/index"
+</script>
+
+<title>ninXout</title>
+
 <div class="overlay"></div>
 <div class="soloblight"></div>
 <div class="row">
     <div class="column column-left">
         <h1>ninXout</h1>
         <h2>he/him, 16</h2>
-        <p>Discord: @ninxout</p>
+        <a>Discord: @ninxout</a>
         <p>Twitter: @ninXout</p>
     </div>
     <div class="column column-right">
-        <p>Favorite Video Game: Geometry Dash</p>
-        <p>Favorite Song: Eastside (with Halsey & Khalid) by benny blanco</p>
-        <p>Favorite Album: I LAY DOWN MY LIFE FOR YOU by JPEGMAFIA</p>
-        <p>Favorite TV Show: XO, Kitty</p>
-        <p>Favorite Movie: Lemonade Mouth</p>
+        <p>Owner of Eclipse Menu and Crystal Client</p>
+        <p>Lead Developer of Geode</p>
+        <p>Developer of Globed, BetterEdit, and iCreate Pro</p>
     </div>
 </div>
